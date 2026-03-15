@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>UU Protocol Specification v0.1</title>
+
+<style>
+
+body{
+background:#000;
+color:#f2f2f2;
+font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
+max-width:920px;
+margin:auto;
+padding:60px 24px;
+line-height:1.7;
+}
+
+h1{font-size:36px;margin-bottom:8px;}
+h2{margin-top:48px;}
+h3{margin-top:28px;}
+
+p{color:#d0d0d0;}
+
+a{color:#ffffff;text-decoration:underline;}
+
+hr{
+border:none;
+border-top:1px solid #333;
+margin:40px 0;
+}
+
+.header{
+margin-bottom:40px;
+}
+
+.meta{
+color:#888;
+font-size:14px;
+margin-top:6px;
+}
+
+code{
+background:#111;
+padding:3px 6px;
+border-radius:4px;
+}
+
+ul{
+margin-top:10px;
+}
+
+.toc{
+background:#080808;
+padding:20px;
+border:1px solid #222;
+margin-top:30px;
+}
+
+.footer{
+margin-top:60px;
+font-size:14px;
+color:#777;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+
+<h1>UU Protocol Specification</h1>
+
+<div class="meta">
+Version 0.1<br>
+Status: Draft (Pre-Deployment)<br>
+Created and stewarded by Uniting Users
+</div>
+
+<p style="margin-top:20px;color:#bbb;max-width:720px;">
+The <strong>UU Protocol</strong> introduces a new primitive for the internet —
+<strong>proof of human origin</strong>.
+</p>
+
+<p style="color:#bbb;max-width:720px;">
+Human-Origin Proofs (HOPs) enable digital systems to recognize human participation
+without identity systems, personal data collection, or storage.
+</p>
+
+<p style="color:#bbb;max-width:720px;">
+The protocol is designed as neutral infrastructure with permissionless participation
+and a strict <strong>zero-storage architecture</strong>.
+</p>
+
+</div>
+
+<hr>
+
+<h2>Status of This Document</h2>
+
+<p>
+This document describes the initial public specification of the <strong>UU Protocol</strong>
+and the architecture of <strong>Human-Origin Proofs (HOPs)</strong>.
+</p>
+
+<p>
+The protocol is currently in a <strong>pre-deployment phase</strong>. During this phase,
+the architecture is published for transparency, research, and technical discussion
+while ecosystem development and long-horizon partner alignment continue.
+</p>
+
+<p>
+Future revisions of this specification may refine definitions, architecture, and
+protocol mechanics while preserving the protocol’s core principles.
+</p>
+
+<p>
+These principles are defined in the repository's
+<strong>PROTOCOL_INVARIANTS.md</strong> and represent permanent commitments
+to privacy preservation, zero-storage architecture, and neutral infrastructure.
+</p>
+
+<hr>
+
+<h2>Abstract</h2>
+
+<p>
+Digital systems currently lack a native capability to recognize whether activity
+originates from a human being or from automated or synthetic systems.
+</p>
+
+<p>
+As artificial intelligence agents and automated participation increasingly populate
+digital environments, this limitation creates structural challenges across digital platforms.
+</p>
+
+<p>
+The <strong>UU Protocol</strong> introduces <strong>proof of human origin</strong>
+as a new capability for the internet.
+</p>
+
+<p>
+The protocol enables digital systems to recognize human-origin participation
+without identity systems, personal data collection, or storage.
+</p>
+
+<hr>
+
+<h2>Protocol Definition</h2>
+
+<p>
+A <strong>Human-Origin Proof (HOP)</strong> is a cryptographically anchored proof event
+generated through a unique physical human action bound to space and time.
+</p>
+
+<p>
+Each proof event produces a <strong>Human-Origin Attestation</strong>
+confirming that a human-origin event occurred.
+</p>
+
+<p>
+Digital systems may recognize these attestations as <strong>human-origin signals</strong>.
+</p>
+
+<p>
+The protocol does not identify individuals and does not establish identity systems.
+</p>
+
+<hr>
+
+<h2>Terminology</h2>
+
+<p>The following terms are used throughout this specification.</p>
+
+<h3>Human-Origin Proof (HOP)</h3>
+
+<p>
+A cryptographically anchored proof event derived from a physical human action
+bound to space and time.
+</p>
+
+<h3>Human-Origin Attestation</h3>
+
+<p>
+A cryptographic statement confirming that a human-origin event occurred.
+</p>
+
+<h3>Human-Origin Signal</h3>
+
+<p>
+A signal emitted by a Human-Origin Attestation allowing digital systems to
+recognize human-origin participation.
+</p>
+
+<h3>Timestamp Ledger</h3>
+
+<p>
+A ledger containing timestamp commitments confirming that proof events occurred.
+The ledger stores no identity information or personal data.
+</p>
+
+<h3>Zero-Storage Architecture</h3>
+
+<p>
+A system design in which no personal data, identity information, or behavioral
+records are stored or retained.
+</p>
+
+<hr>
+
+<div class="toc">
+
+<strong>Contents</strong>
+
+<ul>
+<li>1. Introduction</li>
+<li>2. Proof of Human Origin</li>
+<li>3. Human-Origin Proofs</li>
+<li>4. Protocol Architecture</li>
+<li>5. Privacy Model</li>
+<li>6. Protocol Properties</li>
+<li>7. Governance and Stewardship</li>
+</ul>
+
+</div>
+
+<hr>
+
+<h2>1. Introduction</h2>
+
+<p>
+As artificial intelligence systems, automated agents, and synthetic identities
+increasingly populate digital environments, digital platforms face a structural
+limitation: they cannot reliably determine whether activity originates from
+a human being or from software.
+</p>
+
+<p>
+Existing approaches rely on identity verification systems, behavioral monitoring,
+and centralized databases, which introduce privacy risks and increasing complexity.
+</p>
+
+<p>
+The UU Protocol addresses this limitation by introducing
+<strong>proof of human origin</strong> as a protocol-level capability.
+</p>
+
+<hr>
+
+<h2>2. Proof of Human Origin</h2>
+
+<p>
+Proof of human origin is a cryptographic primitive enabling digital systems to
+recognize that an action originated from a real human being.
+</p>
+
+<p>
+This capability operates without identity systems, personal data collection,
+or persistent user records.
+</p>
+
+<p>
+Instead, the protocol produces cryptographic attestations confirming that a
+human-origin event occurred.
+</p>
+
+<hr>
+
+<h2>3. Human-Origin Proofs (HOPs)</h2>
+
+<p>
+Human-Origin Proofs (HOPs) are cryptographically anchored proof events generated
+through unique physical human actions bound to space and time.
+</p>
+
+<p>
+Each proof event produces a <strong>Human-Origin Attestation</strong>
+confirming that a human-origin event occurred at a specific moment.
+</p>
+
+<p>
+The protocol records only timestamp commitments confirming that proof events occurred.
+</p>
+
+<p>
+No identity data, personal information, or behavioral records are stored.
+</p>
+
+<hr>
+
+<h2>4. Protocol Architecture</h2>
+
+<h3>Human-Origin Proof Generation</h3>
+
+<p>
+Proof events generated through physical human actions.
+</p>
+
+<h3>Human-Origin Attestations</h3>
+
+<p>
+Cryptographic statements confirming human-origin events.
+</p>
+
+<h3>Human-Origin Signals</h3>
+
+<p>
+Signals emitted by attestations allowing digital systems to recognize human-origin participation.
+</p>
+
+<h3>Timestamp Ledger</h3>
+
+<p>
+A ledger containing timestamp commitments confirming proof events occurred,
+without storing personal data or identity information.
+</p>
+
+<hr>
+
+<h2>5. Privacy Model</h2>
+
+<p>The UU Protocol operates under a strict <strong>zero-storage architecture</strong>.</p>
+
+<ul>
+
+<li>No personal data collection</li>
+<li>No identity databases</li>
+<li>No behavioral tracking</li>
+<li>No persistent user records</li>
+<li>No ability to trace activity back to individuals</li>
+
+</ul>
+
+<hr>
+
+<h2>6. Protocol Properties</h2>
+
+<ul>
+
+<li>Permissionless participation</li>
+<li>Neutral infrastructure</li>
+<li>Privacy preservation</li>
+<li>Zero-storage architecture</li>
+<li>Cryptographic integrity</li>
+
+</ul>
+
+<hr>
+
+<h2>7. Governance and Stewardship</h2>
+
+<p>
+The UU Protocol was created by <strong>Uniting Users</strong>,
+which currently acts as the protocol’s initial steward.
+</p>
+
+<p>
+Stewardship is responsible for protecting protocol integrity and supporting
+ecosystem development during the pre-deployment phase.
+</p>
+
+<p>
+The protocol is designed as neutral infrastructure and is not controlled
+by any centralized authority.
+</p>
+
+<p>
+Protocol invariants define permanent commitments to privacy preservation,
+zero-storage architecture, and neutrality, and cannot be overridden by
+stewards or governance mechanisms.
+</p>
+
+<div class="footer">
+
+<p>© UU Protocol</p>
+
+</div>
+
+</body>
+</html>
